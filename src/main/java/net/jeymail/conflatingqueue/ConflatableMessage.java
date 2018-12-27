@@ -1,3 +1,5 @@
+package net.jeymail.conflatingqueue;
+
 public class ConflatableMessage extends AbstractMessage {
     private String key;
     public ConflatableMessage(String key, Object payload) {
@@ -16,7 +18,7 @@ public class ConflatableMessage extends AbstractMessage {
 
     @Override
     public String toString() {
-        return "ConflatableMessage{" +
+        return "net.jeymail.conflatingqueue.ConflatableMessage{" +
                 "key='" + key + '\'' +
                 '}';
     }

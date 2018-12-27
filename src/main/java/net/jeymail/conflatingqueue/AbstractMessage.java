@@ -1,3 +1,5 @@
+package net.jeymail.conflatingqueue;
+
 abstract public class AbstractMessage {
     private Object payload;
 
