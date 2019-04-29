@@ -1,4 +1,8 @@
-package net.jeymail.conflatingqueue;
+package net.jeymail.consumerthreaded;
+
+import net.jeymail.queue.AbstractMessage;
+import net.jeymail.queue.ConflatableMessage;
+import net.jeymail.queue.VanillaMessage;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -7,7 +11,7 @@ import java.util.logging.Logger;
 /**
  * Conflating queue, suitable for low cardinality conflation keys
  */
-public class ConflatingQueue {
+public class ConsumerThreadedQueue {
 
     private Logger logger = Logger.getAnonymousLogger();
 
@@ -16,7 +20,7 @@ public class ConflatingQueue {
     private Object mutex;
 
 
-    public ConflatingQueue() {
+    public ConsumerThreadedQueue() {
         this.mutex = new Object();
         this.queue = new LinkedBlockingQueue<>();
         this.index = new ConcurrentHashMap<String, MessageHolder>();

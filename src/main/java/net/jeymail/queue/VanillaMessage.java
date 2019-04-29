@@ -1,4 +1,4 @@
-package net.jeymail.conflatingqueue;
+package net.jeymail.queue;
 
 public class VanillaMessage extends AbstractMessage {
 
@@ -12,6 +12,6 @@ public class VanillaMessage extends AbstractMessage {
 
     @Override
     public String toString() {
-        return "net.jeymail.conflatingqueue.VanillaMessage{}";
+        return "VanillaMessage{}";
     }
 }
