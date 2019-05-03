@@ -9,6 +9,7 @@ public class ConflatableMessage extends AbstractMessage {
         this.key = key;
     }
 
+
     @Override
     public boolean isConflatable() {
         return true;

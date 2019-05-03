@@ -1,12 +1,15 @@
 package net.jeymail.queue;
 
 abstract public class AbstractMessage {
-    private Object payload;
+    protected Object payload;
 
     public AbstractMessage(Object payload) {
         this.payload = payload;
     }
 
+    public void setPayload(Object payload) {
+        this.payload = payload;
+    }
 
     public Object getPayload() {
         return payload;
@@ -14,4 +17,5 @@ abstract public class AbstractMessage {
 
     abstract public boolean isConflatable();
 
+    abstract public String getKey();
 }

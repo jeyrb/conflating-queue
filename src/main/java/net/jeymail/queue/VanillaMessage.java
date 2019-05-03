@@ -14,4 +14,9 @@ public class VanillaMessage extends AbstractMessage {
     public String toString() {
         return "VanillaMessage{}";
     }
+
+    @Override
+    public String getKey() {
+        return null;
+    }
 }
