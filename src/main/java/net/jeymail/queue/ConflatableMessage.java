@@ -1,22 +1,25 @@
 package net.jeymail.queue;
 
-import net.jeymail.queue.AbstractMessage;
-
 public class ConflatableMessage extends AbstractMessage {
-    private String key;
+    private final String key;
+
+    /**
+     * @param key     Must be globally unique across all instances of conflatablemessage
+     * @param payload
+     */
     public ConflatableMessage(String key, Object payload) {
         super(payload);
         this.key = key;
     }
 
 
+    public String getKey() {
+        return key;
+    }
+
     @Override
     public boolean isConflatable() {
         return true;
-    }
-
-    public String getKey() {
-        return key;
     }
 
     @Override

@@ -6,10 +6,6 @@ public class VanillaMessage extends AbstractMessage {
         super(payload);
     }
 
-    public boolean isConflatable() {
-        return false;
-    }
-
     @Override
     public String toString() {
         return "VanillaMessage{}";
@@ -18,5 +14,10 @@ public class VanillaMessage extends AbstractMessage {
     @Override
     public String getKey() {
         return null;
+    }
+
+    @Override
+    public boolean isConflatable() {
+        return false;
     }
 }
