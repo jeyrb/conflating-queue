@@ -3,9 +3,6 @@ package net.jeymail.queue.conflating;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
-import net.jeymail.queue.AbstractMessage;
-import net.jeymail.queue.ConflatableMessage;
-import net.jeymail.queue.VanillaMessage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

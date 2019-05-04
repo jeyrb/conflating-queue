@@ -1,9 +1,5 @@
 package net.jeymail.queue.conflating;
 
-import net.jeymail.queue.AbstractMessage;
-import net.jeymail.queue.ConflatableMessage;
-import net.jeymail.queue.VanillaMessage;
-
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.concurrent.ConcurrentHashMap;

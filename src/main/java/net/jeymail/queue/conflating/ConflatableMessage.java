@@ -1,4 +1,4 @@
-package net.jeymail.queue;
+package net.jeymail.queue.conflating;
 
 public class ConflatableMessage extends AbstractMessage {
     private final String key;
