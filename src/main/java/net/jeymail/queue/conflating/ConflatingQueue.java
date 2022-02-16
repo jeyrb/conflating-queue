@@ -51,13 +51,13 @@ class ConflatingQueue {
      * Run from periodic timer, aimed at slow consumers only to control memory usage
      */
     public void sweep() {
-        synchronized (this.mutex) {
+        // used to be a synch on mutex here but don't need 
+        // since using LinkedBlockingQueue and ConcurrentHashMap
             if (this.queue.removeIf(m -> m.isConflatable()
                     && this.headIndex.getOrDefault(m.getKey(), m) != m)
             ) {
                 logger.info("Swept conflated messages");
             }
-        }
     }
 
     public AbstractMessage take()  {
